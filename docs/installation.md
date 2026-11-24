@@ -16,7 +16,7 @@ opam switch create 5.4.0
 eval $(opam env)
 
 # Clone and build BeingDB
-git clone https://github.com/jptmoore/beingdb.git
+git clone https://github.com/beingdb/beingdb.git
 cd beingdb
 opam install . --deps-only --with-test -y
 dune build --release
@@ -38,7 +38,7 @@ opam switch create 5.4.0
 eval $(opam env)
 
 # Clone and build BeingDB
-git clone https://github.com/jptmoore/beingdb.git
+git clone https://github.com/beingdb/beingdb.git
 cd beingdb
 opam install . --deps-only --with-test -y
 dune build --release
@@ -57,7 +57,7 @@ Installation provides the `beingdb` command:
 - `beingdb compile` - Compile the Git store into a pack store
 - `beingdb serve` - Start the HTTP query server
 - `beingdb repl` - Interactive query REPL against a pack store
-- `beingdb export` - Export a pack store for querying in a web browser ([beingdb-wasm](https://github.com/jptmoore/beingdb-wasm))
+- `beingdb export` - Export a pack store for querying in a web browser ([beingdb-wasm](https://github.com/beingdb/beingdb-wasm))
 
 Each command is also installed as a standalone binary (`beingdb-clone`,
 `beingdb-compile`, `beingdb-serve`, ...), which the Docker image uses.

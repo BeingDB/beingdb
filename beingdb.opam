@@ -7,8 +7,8 @@ description:
 maintainer: ["John Moore <jmoore@zedstar.org>"]
 authors: ["John Moore <john.moore@zedstar.org>"]
 license: "MIT"
-homepage: "https://github.com/jptmoore/beingdb"
-bug-reports: "https://github.com/jptmoore/beingdb/issues"
+homepage: "https://github.com/beingdb/beingdb"
+bug-reports: "https://github.com/beingdb/beingdb/issues"
 depends: [
   "ocaml" {>= "5.4.0"}
   "dune" {>= "3.7"}
@@ -41,4 +41,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/jptmoore/beingdb.git"
+dev-repo: "git+https://github.com/beingdb/beingdb.git"

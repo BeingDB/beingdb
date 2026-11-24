@@ -71,7 +71,7 @@ let cmd =
       `P
         "Writes the compiled Pack store as one JSON file that the BeingDB WebAssembly runtime loads in a browser, so \
          the facts can be published as a static website and queried without a server.";
-      `P "Publish the file with beingdb-wasm: https://github.com/jptmoore/beingdb-wasm";
+      `P "Publish the file with beingdb-wasm: https://github.com/beingdb/beingdb-wasm";
       `P "Example:";
       `Pre "  beingdb export --pack ./pack_store -o ./facts.browser.json";
       `Pre "  beingdb-export --pack ./pack_store -o ./facts.browser.json";

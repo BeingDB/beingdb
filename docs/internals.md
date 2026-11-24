@@ -45,7 +45,7 @@ backward compatibility.
 The split separates platform-independent runtime logic from the Unix
 adapter so that the runtime can run in other environments. This
 repository contains only the native adapter; the browser/WebAssembly
-build lives in [beingdb-wasm](https://github.com/jptmoore/beingdb-wasm),
+build lives in [beingdb-wasm](https://github.com/beingdb/beingdb-wasm),
 which compiles this runtime unchanged with `wasm_of_ocaml` and supplies
 its own `READER`. Server-only concerns remain outside the runtime: the query timeout (`Lwt_unix.with_timeout`
 in `Controller`), Dream, and the CLI.

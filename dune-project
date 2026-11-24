@@ -4,7 +4,7 @@
 
 (generate_opam_files true)
 
-(source (github jptmoore/beingdb))
+(source (github beingdb/beingdb))
 (license MIT)
 (authors "John Moore <john.moore@zedstar.org>")
 (maintainers "John Moore <jmoore@zedstar.org>")

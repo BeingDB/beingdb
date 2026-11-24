@@ -321,11 +321,11 @@ publish it as a static website that queries it in the browser:
 beingdb export --pack ./pack_store -o facts.browser.json
 ```
 
-Then bundle the file with [beingdb-wasm](https://github.com/jptmoore/beingdb-wasm#publish-your-own-facts)
+Then bundle the file with [beingdb-wasm](https://github.com/beingdb/beingdb-wasm#publish-your-own-facts)
 (`npm run bundle -- --data facts.browser.json`) and upload the result to any
 static host. On GitHub, bundle into the repository's `docs/` folder and serve
 it with GitHub Pages, as the
-[REWIND interviews](https://github.com/jptmoore/beingdb-rewind-interviews)
+[REWIND interviews](https://github.com/beingdb/beingdb-rewind-interviews)
 repository does.
 After the facts change, recompile, export and publish again.
 

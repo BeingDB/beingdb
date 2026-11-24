@@ -4,7 +4,7 @@ This tutorial teaches the BeingDB query language from first principles
 using a real dataset: facts extracted from the
 [REWIND](https://rewind.ac.uk/) archive of interviews with British and
 international video artists, published at
-[beingdb-rewind-interviews](https://github.com/jptmoore/beingdb-rewind-interviews).
+[beingdb-rewind-interviews](https://github.com/beingdb/beingdb-rewind-interviews).
 
 You will clone the archive, compile it, and then work through
 progressively richer questions:
@@ -46,13 +46,13 @@ Create a working directory and clone the facts into a BeingDB Git store:
 mkdir rewind-tutorial && cd rewind-tutorial
 
 beingdb clone \
-  https://github.com/jptmoore/beingdb-rewind-interviews.git \
+  https://github.com/beingdb/beingdb-rewind-interviews.git \
   --git ./rewind_git
 ```
 
 ```
 BeingDB Clone
-Remote: https://github.com/jptmoore/beingdb-rewind-interviews.git
+Remote: https://github.com/beingdb/beingdb-rewind-interviews.git
 Local:  ./rewind_git
 
 Initializing Git store...
@@ -1341,7 +1341,7 @@ server and REPL first):
 
 ```bash
 beingdb pull \
-  https://github.com/jptmoore/beingdb-rewind-interviews.git \
+  https://github.com/beingdb/beingdb-rewind-interviews.git \
   --git ./rewind_git
 
 beingdb compile --git ./rewind_git --pack ./rewind_pack
@@ -1538,5 +1538,5 @@ commissioned by both `bbc` and `late_show`.
   configuration.
 - [Getting Started](getting-started.md): building your own facts
   repository.
-- [beingdb-rewind-interviews](https://github.com/jptmoore/beingdb-rewind-interviews):
+- [beingdb-rewind-interviews](https://github.com/beingdb/beingdb-rewind-interviews):
   how the dataset was extracted, and its evidence files.

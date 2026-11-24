@@ -17,7 +17,7 @@ BeingDB compiles those facts into an optimized, read-only store that can be quer
 
 ## Why BeingDB?
 
-The BeingDB query runtime compiles to WebAssembly, so a compiled fact store can be published as a static website and queried entirely client-side: no server, no account, and queries never leave the page. The same parser, validator, planner and evaluator used by the native server run unchanged in the browser. **[Try it now](https://jptmoore.github.io/beingdb-rewind-interviews/)** on the [REWIND](https://rewind.ac.uk/) artists' interviews, learn the query language in the [interactive tutorial](https://jptmoore.github.io/beingdb-wasm/tutorial/), or see [Run in the browser](#run-in-the-browser) to publish your own facts.
+The BeingDB query runtime compiles to WebAssembly, so a compiled fact store can be published as a static website and queried entirely client-side: no server, no account, and queries never leave the page. The same parser, validator, planner and evaluator used by the native server run unchanged in the browser. **[Try it now](https://beingdb.github.io/beingdb-rewind-interviews/)** on the [REWIND](https://rewind.ac.uk/) artists' interviews, learn the query language in the [interactive tutorial](https://beingdb.github.io/beingdb-wasm/tutorial/), or see [Run in the browser](#run-in-the-browser) to publish your own facts.
 
 RAG systems are good at retrieving relevant text, but some questions are better answered from explicit structured facts.
 
@@ -98,7 +98,7 @@ For example, a system might use:
 
 The API exposes the available predicates so an LLM can discover the vocabulary before constructing queries. It can also resolve the names in a question to the exact values stored (`GET /resolve`, tolerating misspellings and using any `label`/`alias` facts), and list everything known about one value (`GET /about`), so a query uses real constants rather than guessed ones.
 
-For MCP-based integrations, see the [BeingDB MCP server](https://github.com/jptmoore/beingdb-mcp).
+For MCP-based integrations, see the [BeingDB MCP server](https://github.com/beingdb/beingdb-mcp).
 
 ## Quick start
 
@@ -178,7 +178,7 @@ The REPL uses the predicates in the database to provide a query environment tail
 
 ## Run in the browser
 
-A compiled store can also be published as a static website, queried in the browser by the same engine compiled to WebAssembly ([beingdb-wasm](https://github.com/jptmoore/beingdb-wasm)). Visitors install nothing, and any static host will do, such as GitHub Pages.
+A compiled store can also be published as a static website, queried in the browser by the same engine compiled to WebAssembly ([beingdb-wasm](https://github.com/beingdb/beingdb-wasm)). Visitors install nothing, and any static host will do, such as GitHub Pages.
 
 Export the compiled store as a single file:
 
@@ -189,14 +189,14 @@ beingdb export --pack ./pack_store -o facts.browser.json
 Then bundle it into a site with beingdb-wasm (needs only Node):
 
 ```bash
-git clone https://github.com/jptmoore/beingdb-wasm.git
+git clone https://github.com/beingdb/beingdb-wasm.git
 cd beingdb-wasm
 npm run bundle -- --data ../facts.browser.json --title "My facts" --out ../my-site
 ```
 
-and publish the `my-site/` folder. See [beingdb-wasm](https://github.com/jptmoore/beingdb-wasm#publish-your-own-facts) for configuring the page and the JavaScript API.
+and publish the `my-site/` folder. See [beingdb-wasm](https://github.com/beingdb/beingdb-wasm#publish-your-own-facts) for configuring the page and the JavaScript API.
 
-If your facts are in a GitHub repository, bundle into its `docs/` folder and let GitHub Pages serve it. The [REWIND interviews](https://github.com/jptmoore/beingdb-rewind-interviews) repository does exactly that, with **[the live site](https://jptmoore.github.io/beingdb-rewind-interviews/)**.
+If your facts are in a GitHub repository, bundle into its `docs/` folder and let GitHub Pages serve it. The [REWIND interviews](https://github.com/beingdb/beingdb-rewind-interviews) repository does exactly that, with **[the live site](https://beingdb.github.io/beingdb-rewind-interviews/)**.
 
 ## Example
 
@@ -206,7 +206,7 @@ A sample repository is available at:
 
 It provides a small dataset that can be cloned, compiled and queried with BeingDB.
 
-For a larger dataset running entirely in the browser, see the [REWIND interviews](https://jptmoore.github.io/beingdb-rewind-interviews/) site and the [BeingDB tutorial](https://jptmoore.github.io/beingdb-wasm/tutorial/) built on it.
+For a larger dataset running entirely in the browser, see the [REWIND interviews](https://beingdb.github.io/beingdb-rewind-interviews/) site and the [BeingDB tutorial](https://beingdb.github.io/beingdb-wasm/tutorial/) built on it.
 
 ## Documentation
 
